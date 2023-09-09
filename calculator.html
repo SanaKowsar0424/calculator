@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        h1:hover{
+            color:biege;
+
+        }
+        .formstyle
+        {
+            background-color: lavender;
+            width:240px;
+            margin: auto;
+            border:1px solid black;
+            border-radius:5px;
+        }
+        .b{
+            width:50px;
+            height:50px;
+            background-color: mint;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            font-size: 15px;
+
+        }
+        .t{
+            width:130px;
+            height:30px;
+            font-size: 19.5px;
+
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMPLE  CALCULATOR</title>
+    <script>
+        function ac() {
+            document.getElementById("res").value="";
+        }
+        function show(input){
+            document.getElementById("res").value+=input;
+        }
+        function calc(){
+            var output=eval(document.getElementById("res").value);
+            document.getElementById("res").value=output;
+        }
+
+    </script>
+</head>
+<body>
+    <h1 align="center">Calculator!</h1>
+    <div class="formstyle">
+    <input class='t'type="text" id="res"><br><br>
+    <button class='b' onclick="show('(')">(</button>&nbsp&nbsp
+    <button class='b'onclick="show(')')">)</button>&nbsp&nbsp
+    <button class='b'onclick="show('.')">.</button>&nbsp&nbsp
+    <button class='b'onclick="ac()">AC</button><br><br>
+    <button class='b'onclick="show('1')">1</button>&nbsp&nbsp
+    <button class='b'onclick="show('2')">2</button>&nbsp&nbsp
+    <button class='b'onclick="show('3')">3</button>&nbsp&nbsp
+    <button class='b'onclick="show('+')">+</button><br><br>
+    <button class='b'onclick="show('4')">4</button>&nbsp&nbsp
+    <button class='b'onclick="show('5')">5</button>&nbsp&nbsp
+    <button class='b'onclick="show('6')">6</button>&nbsp&nbsp
+    <button class='b'onclick="show('-')">-</button><br><br>
+    <button class='b'onclick="show('7')">7</button>&nbsp&nbsp
+    <button class='b'onclick="show('8')">8</button>&nbsp&nbsp
+    <button class='b'onclick="show('9')">9</button>&nbsp&nbsp
+    <button class='b'onclick="show('*')">*</button><br><br>
+    <button class='b'onclick="show('%')">%</button>&nbsp&nbsp
+    <button class='b'onclick="show('0')">0</button>&nbsp&nbsp
+    <button class='b'onclick="show('/')">/</button>&nbsp&nbsp
+    <button class='b'onclick="calc()">=</button><br><br>
+</div>
+</body>
+</html>
